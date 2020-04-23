@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài thi</title>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="500" style="border: 2px solid #666666"></canvas>
+<script>
+    //bai 4:
+    function Circle(x,y,radius,color) {
+        this.x=x;
+        this.y=y;
+        this.radius=radius;
+        this.color=color;
+        let c= document.getElementById("myCanvas");
+        let ctx=c.getContext('2d');
+        this.render =function () {
+            ctx.beginPath();
+            ctx.arc(this.x,this.y,this.radius,0,2*Math.PI);
+            ctx.fillStyle=this.color;
+            ctx.fill();
+        }
+    }
+    let circle1=new Circle(10,10,100,"#000000");
+    circle1.render();
+</script>
+</body>
+</html>

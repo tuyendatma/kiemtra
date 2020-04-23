@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 3</title>
+</head>
+<body>
+<script>
+    //bai 3
+    function isFibonaci(n) {
+        let f0 =0;
+        let f1=1;
+        let f2=0;
+        while (f2>=0){
+            if(f2<n){
+                f2=f0+f1;
+                f0=f1;
+                f1=f2;
+            }
+            else if (f2===n){
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+    }
+</script>
+</body>
+</html>
