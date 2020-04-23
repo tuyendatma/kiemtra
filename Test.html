@@ -23,6 +23,7 @@
         for(let i=0;i<arr.length;i++){
             if(arr[i]==num){
                 arr.splice(i,1);
+                i--;
             }
         }
         return arr;
@@ -33,7 +34,9 @@
     //bai 3
     function isFibonaci() {
         let n = parseInt(prompt("input"));
-        let f0 =0;f1=1,f2=0;
+        let f0 =0;
+        let f1=1;
+        let f2=0;
         while (f2>=0){
             if(f2<n){
                 f2=f0+f1;
